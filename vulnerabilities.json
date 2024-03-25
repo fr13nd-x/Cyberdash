@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "SQL Injection", "description": "SQL injection vulnerability found in application." },
+  { "id": 2, "title": "Cross-Site Scripting (XSS)", "description": "XSS vulnerability identified." },
+  { "id": 3, "title": "Insecure Deserialization", "description": "Deserialization vulnerability detected." },
+  // Add more vulnerability objects as needed
+]

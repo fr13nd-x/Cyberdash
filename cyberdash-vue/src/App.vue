@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Sidebar from './components/Sidebar.vue';
+import Sidebar from './components/SidebarMenu.vue';
 import MainContent from './components/MainContent.vue';
 
 export default {

@@ -1,6 +1,0 @@
-[
-  { "id": 1, "title": "Security Breach", "description": "Unauthorized access detected." },
-  { "id": 2, "title": "Data Leak", "description": "Sensitive data leaked." },
-  { "id": 3, "title": "Malware Attack", "description": "Malicious software detected." },
-  // Add more incident objects as needed
-]

@@ -1,6 +1,7 @@
 <template>
   <div class="main-content">
     <!-- Content goes here -->
+    
   </div>
 </template>
 

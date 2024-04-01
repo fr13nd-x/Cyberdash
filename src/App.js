@@ -3,6 +3,7 @@ import React,{useState,useEffect} from 'react';
 import DataWrapper from './components/DataWrapper'
 import CVEContainer from './components/CVEContainer'
 
+
 function App(props) {
   //begin fetch JSON data https://www.pluralsight.com/guides/fetch-data-from-a-json-file-in-a-react-app
     const [data,setData]=useState([]);

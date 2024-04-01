@@ -1,76 +1,85 @@
-# Detectree
+# Getting Started
+Open your terminal and then type:\
+`$ git clone {https://github.com/michaelpgalen/CVE-Data-Vis-Challenge}` \
+That clones the repo.\
 
----
+Then, cd into the new folder by typing:\
+`CD CVE-Data-Vis-Challenge` \
 
-Detectree is a data visualisation tool for blue teams. It provides a graphical representation of detection data, which allows an analyst generate almost instant opinions about the nature of the underlying activity and to understand complex relationships between the data points. Ultimately, this can help reduce response time, reduce alert fatigue and facilitate communication between analysts within the teams.
+Then, type:\
+$ `npm install`\
+This installs the required dependencies.\
 
-Detectree is written in svelte and based on the [force-graph](https://github.com/vasturiano/force-graph) javascript library.
+To run the React project:\
+$ `npm start` \
 
----
+## About this project
+This my first React project. A way to visualize and help a user understand 500 records of CVE data - Common Vulnerabilities and Exposures - from a JSON file.
 
-## Getting Started
 
-In order to use Detectree in your environment the detections need to satisfy a minimum set of properties. In the following table you can see which fields must be included in each detection and which are optional.
+## Available Scripts
 
-| Field               | Required |
-| ------------------- | -------- |
-| Endpoint ID         | yes      |
-| Category            | yes      |
-| Severity            | yes      |
-| Detection Name      | yes      |
-| Parent Process Name | yes      |
-| Parent Process ID   | yes      |
-| Process Name        | yes      |
-| Process ID          | yes      |
-| User                | no       |
-| Command Line        | no       |
-| File Name           | no       |
-| Registry Key        | no       |
-| Network Address     | no       |
-| Target Process Name | no       |
-| Target Process ID   | no       |
+In the project directory, you can run:
 
-The mappings for each field are defined in the _schema.yml_ file, an example file [schema.yml.example](./schema.yml.example) is provided. This file defines which fields should be extracted from the data in the backend and how they are mapped internally. In particular the mapping part contains the detectree mapping on the left and the backend mapping on the right, you will need to populate the mapping according to your environment.
+### `npm start`
 
-The schema also contains the backend configuration, for elastic it should be straight forward but the meaning of the various fields is the following:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-`primaryId` is the unique identifier for the endpoint. This is what is used to retireve the detections.
-`timeField` is the time field used to restrict the query.
-`source` is the field which identifies the detection type, in the example schema this is mapped to `NewProcess`, `RegistryWrite`, `FileAccess` and so on.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Subsequently in the `mappings` the `type` field identifies a specific detection, for example if your backend only supports `NewProcess` detections (or whatever the corresponding name is) you will require only one mapping. Strictly related to this the `kind` field links the detection type to the detectree one. As an example if `kind` is `file` the mapping should provide a `filePath` which will be used to draw a context node.
+### `npm test`
 
-Currently the only supported backend is elastic however it should be trivial to build an adapter for any new backend. See the [Adding a new backend](#adding-a-new-backend) section for further information.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-In order to deploy the application in your environment you need to install the required dependencies with with `npm install` (or `pnpm install` or `yarn`). You will then need to select the right adapter for your environment, follow [this guide](https://kit.svelte.dev/docs/adapters) for the most up to date information.
+### `npm run build`
 
-If for example you want to use node as your backend you need to install `@sveltejs/adapter-node` add modify your `svelte.config.js` substituting `@sveltejs/adapter-auto` with `@sveltejs/adapter-node`. The project can then be built with the following command, the output will be in the `output` folder.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```bash
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-npm run build
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```
+### `npm run eject`
 
-A development server can be started with, this will allow to serve the application locally.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```bash
-npm run dev
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-An example graph can be seen in the following screenshot
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-![example](./example.png)
+## Learn More
 
-## Adding a new backend
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-In order to support a new backend you need to create a dedicated TypeScript file in the [backend_adapters](./src/backend_adapters/) folder. You can use the elastic one as a template, the new module should expose a query function that should take as input the same parameters as the one in the elastic file. You can then query the chosen backend in the preferred way. The query function should return an object containing the data mapped according to the mapping defined in the schema.yaml file. Finally in order for the backend to be correctly selected you also need to add it in the following object inside [draw_tree.ts](./src/routes/draw_tree.ts), the object keys here will also be how the backend is referenced in the `schema.yml`
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-```js
-const backendTypes = {
-	elastic: '../backend_adapters/elastic'
-};
-```
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

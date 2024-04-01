@@ -21,3 +21,7 @@ code {
   flex-flow: row nowrap;
   align-items: flex-end;
 }
+
+.textContainer {
+  color: darkred;
+}

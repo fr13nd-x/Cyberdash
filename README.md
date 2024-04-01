@@ -1,58 +1,52 @@
-# Getting Started
-Open your terminal and then type:\
-`$ git clone {https://github.com/michaelpgalen/CVE-Data-Vis-Challenge}` \
-That clones the repo.\
+## CVE Data Visualization React Project Documentation
 
-Then, cd into the new folder by typing:\
-`CD CVE-Data-Vis-Challenge` \
+Welcome to the CVE Data Visualization React Project Documentation. This documentation provides comprehensive guidance on setting up, running, and understanding the project.
 
-Then, type:\
-$ `npm install`\
-This installs the required dependencies.\
+### Getting Started
+To begin working with the project, follow these steps:
 
-To run the React project:\
-$ `npm start` \
+1. Clone the repository to your local machine:
+    ```bash
+    $ git clone https://github.com/michaelpgalen/CVE-Data-Vis-Challenge
+    ```
+2. Navigate into the project directory:
+    ```bash
+    $ cd CVE-Data-Vis-Challenge
+    ```
+3. Install project dependencies:
+    ```bash
+    $ npm install
+    ```
 
-## About this project
-This my first React project. A way to visualize and help a user understand 500 records of CVE data - Common Vulnerabilities and Exposures - from a JSON file.
+### Running the Project
+Once you've cloned the repository and installed dependencies, you can run the React project using the following command:
+```bash
+$ npm start
+```
+This command starts the application in development mode. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
+### About the Project
+The CVE Data Visualization React Project is the author's first React project. It serves as a tool to visualize and help users understand 500 records of Common Vulnerabilities and Exposures (CVE) data from a JSON file.
 
-## Available Scripts
+### Available Scripts
+In the project directory, you can run the following scripts:
 
-In the project directory, you can run:
+#### `npm start`
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload when you make changes.
 
-### `npm start`
+#### `npm test`
+Launches the test runner in interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### `npm run build`
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified, and the filenames include the hashes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### `npm run eject`
+**Note: This is a one-way operation. Once you `eject`, you can't go back!**
 
-### `npm test`
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command removes the single build dependency from your project and copies all configuration files and transitive dependencies (webpack, Babel, ESLint, etc.) into your project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Conclusion
+The CVE Data Visualization React Project provides a valuable learning experience in building React applications and visualizing complex data sets. It offers users insights into cybersecurity vulnerabilities and demonstrates best practices in React development.
 
 ## Learn More
 

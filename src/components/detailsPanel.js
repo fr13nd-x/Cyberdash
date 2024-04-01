@@ -47,3 +47,9 @@ function DetailsPanel(props) {
 }
 
 export default DetailsPanel;
+
+
+
+
+
+

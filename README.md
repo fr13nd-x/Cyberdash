@@ -1,4 +1,4 @@
-## CVE Data Visualization React Project Documentation
+## Cyberdash CVE Data Visualization Project Documentation
 
 Welcome to the CVE Data Visualization React Project Documentation. This documentation provides comprehensive guidance on setting up, running, and understanding the project.
 
@@ -7,11 +7,11 @@ To begin working with the project, follow these steps:
 
 1. Clone the repository to your local machine:
     ```bash
-    $ git clone https://github.com/michaelpgalen/CVE-Data-Vis-Challenge
+    $ git clone https://github.com/fr13nd-x/Cyberdash.git
     ```
 2. Navigate into the project directory:
     ```bash
-    $ cd CVE-Data-Vis-Challenge
+    $ cd Cyberdash
     ```
 3. Install project dependencies:
     ```bash
@@ -26,7 +26,7 @@ $ npm start
 This command starts the application in development mode. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
 ### About the Project
-The CVE Data Visualization React Project is the author's first React project. It serves as a tool to visualize and help users understand 500 records of Common Vulnerabilities and Exposures (CVE) data from a JSON file.
+The CVE Data Visualization React Project is the author's first React project. It serves as a tool to visualize and help users understand 500 records of Common Vulnerabilities and Exposures (CVE) data from a JSON file. (downloaded from cve.org)
 
 ### Available Scripts
 In the project directory, you can run the following scripts:

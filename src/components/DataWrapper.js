@@ -3,6 +3,7 @@ import CVEContainer from './CVEContainer';
 import DetailsPanel from './detailsPanel';
 
 
+
 function DataWrapper(props) {
   const [activeCVE, setCVE] = useState({});
   const updateActiveCVE = (newActiveCVE) => {
